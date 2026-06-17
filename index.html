@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IROS 2026 IIG Workshop</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
   <style>
     :root {
       --ink: #0b1b1e;
@@ -13,63 +14,104 @@
       --sea: #1f6f78;
       --rose: #f26a8d;
     }
+
     body {
       font-family: "Space Grotesk", system-ui, sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, #e7f4f1 0%, #f7f1e8 45%, #fffaf0 100%);
+      background: radial-gradient(
+        1200px 600px at 10% -10%,
+        #e7f4f1 0%,
+        #f7f1e8 45%,
+        #fffaf0 100%
+      );
       color: var(--ink);
     }
+
     .grid-glow {
       background-image:
         linear-gradient(transparent 95%, rgba(11,27,30,0.08) 96%),
         linear-gradient(90deg, transparent 95%, rgba(11,27,30,0.08) 96%);
       background-size: 28px 28px;
     }
+
+    .top-nav-link.active {
+      background: rgba(255,255,255,0.95);
+      color: var(--sea);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
   </style>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body class="min-h-screen">
+
+  <!-- Top Navigation -->
+  <nav class="sticky top-0 z-50 border-b border-[var(--ink)]/10 bg-white/75 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div class="text-sm font-semibold tracking-wide text-[var(--sea)]">
+        IROS 2026 IIG Workshop
+      </div>
+
+      <div class="flex items-center gap-3 rounded-full border border-[var(--ink)]/10 bg-white/60 p-1 shadow-sm">
+        <a href="index.html"
+           class="top-nav-link active rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200">
+          Main
+        </a>
+
+        <a href="competition.html"
+           class="top-nav-link rounded-full px-5 py-2 text-sm font-semibold text-[var(--ink)]/70 hover:bg-white/80 transition-all duration-200">
+          Competition
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN PAGE -->
   <header class="relative overflow-hidden">
     <div class="absolute inset-0 grid-glow opacity-40"></div>
     <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[var(--sun)]/30 blur-3xl"></div>
     <div class="absolute top-20 -left-16 h-64 w-64 rounded-full bg-[var(--rose)]/25 blur-3xl"></div>
+
     <div class="relative mx-auto max-w-6xl px-6 py-16">
-      <div class="inline-flex items-center gap-2 rounded-full border border-[var(--ink)]/10 bg-white/70 px-4 py-2 text-sm font-medium text-[var(--sea)] shadow-sm">
-        IROS 2026 IIG Workshop
-      </div>
+
       <h1 class="mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
         The Workshop and Competition on Intelligent Information Gathering for Single and Multi-Robot Systems
       </h1>
+
       <p class="mt-6 max-w-3xl text-lg text-[var(--ink)]/80">
         A forward-looking forum on adaptive sensing, exploration, and coordination strategies.
       </p>
-      <div class="mt-8 flex flex-wrap gap-4 text-sm text-[var(--ink)]/70">
-        <span class="rounded-full border border-[var(--ink)]/10 bg-white/70 px-4 py-2">Autonomy and Perception</span>
-        <span class="rounded-full border border-[var(--ink)]/10 bg-white/70 px-4 py-2">Multi-Robot Coordination</span>
-        <span class="rounded-full border border-[var(--ink)]/10 bg-white/70 px-4 py-2">Information-Theoretic Planning</span>
-      </div>
     </div>
   </header>
 
   <main class="mx-auto max-w-6xl px-6 pb-16">
+
+    <!-- ABSTRACT (UNCHANGED CONTENT) -->
     <section class="mt-10 rounded-3xl border border-[var(--ink)]/10 bg-white/80 p-8 shadow-sm">
       <h2 class="text-2xl font-semibold text-[var(--sea)]">Abstract</h2>
-      <div class="mt-4 space-y-4 text-sm text-[var(--ink)]/80 leading-relaxed">
+
+      <div class="mt-4 space-y-4 text-sm leading-relaxed text-[var(--ink)]/80">
         <p>
           Intelligent information gathering is a central capability for autonomous robots, enabling applications such as search and rescue, inspection, reconnaissance, environmental monitoring, and mapping. These tasks require robots to reason about where to sense next to maximize the value of collected information under limited time, energy, and communication constraints. From an algorithmic perspective, this problem lies at the <strong>intersection of active perception, exploration planning, and decision-making under uncertainty</strong>. Compared to related past workshop events, this workshop seeks to expand the scope to a broader set of information-gathering problems and introduces an accessible competition platform with minimal setup requirements. By combining technical presentations with a benchmarking challenge, the workshop aims to stimulate discussion and accelerate progress in autonomous information gathering for real-world robotic systems.
         </p>
+
         <p>
           The event combines <strong>invited talks</strong> from academia and industry experts presenting recent progress, <strong>poster presentations</strong> for invited workshop paper submissions, and an <strong>open-source simulation competition</strong> focused on indoor exploration. The competition includes both single-robot and multi-robot tracks to encourage broad participation and highlight challenges in exploration performance, mission efficiency, and coordination under communication constraints. Participants will evaluate algorithms based on coverage of previously unknown environments and efficient use of mission budgets, with the winners of the challenge also presenting their approaches as part of the workshop program.
         </p>
+
         <p>
           Compared to related past workshop events, this workshop seeks to expand the scope to a broader set of information-gathering problems and introduces an accessible competition platform with minimal setup requirements. By combining technical presentations with a benchmarking challenge, the workshop aims to stimulate discussion and accelerate progress in autonomous information gathering for real-world robotic systems.
         </p>
       </div>
     </section>
 
-    <section class="rounded-3xl border border-[var(--ink)]/10 bg-white/80 p-8 shadow-sm">
+    <!-- SPEAKERS -->
+    <section class="mt-10 rounded-3xl border border-[var(--ink)]/10 bg-white/80 p-8 shadow-sm">
       <h2 class="text-2xl font-semibold text-[var(--sea)]">Speakers</h2>
+
       <ul class="mt-4 space-y-3 text-lg text-[var(--ink)]/80">
         <li><strong>Kostas Alexis</strong>, Norwegian University of Science and Technology, Norway</li>
         <li><strong>Jen Jen Chung</strong>, The University of Queensland, Australia</li>
@@ -86,87 +128,22 @@
       </figure>
     </section>
 
+    <!-- COMPETITION SECTION (UNCHANGED FOR FUTURE EDITING) -->
     <section class="mt-10 rounded-3xl border border-[var(--ink)]/10 bg-white/80 p-8 shadow-sm">
-      <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h2 class="text-2xl font-semibold text-[var(--sea)]">Competition</h2>
-          <p class="mt-2 text-sm text-[var(--ink)]/70">Indoor exploration benchmark and challenge track.</p>
-        </div>
-        <div class="text-xs text-[var(--ink)]/60">Use the tabs to browse details.</div>
-      </div>
+      <h2 class="text-2xl font-semibold text-[var(--sea)]">Competition</h2>
 
-      <div class="mt-6 grid gap-6 lg:grid-cols-[220px_1fr]">
-        <div class="space-y-2 text-sm">
-          <button class="competition-tab w-full rounded-xl border border-[var(--ink)]/10 bg-[var(--sea)]/10 px-4 py-3 text-left font-semibold text-[var(--sea)]" data-tab="motivation">Motivation</button>
-          <button class="competition-tab w-full rounded-xl border border-[var(--ink)]/10 bg-white/70 px-4 py-3 text-left font-semibold text-[var(--ink)]/80" data-tab="tasks">Task Descriptions</button>
-          <button class="competition-tab w-full rounded-xl border border-[var(--ink)]/10 bg-white/70 px-4 py-3 text-left font-semibold text-[var(--ink)]/80" data-tab="simulation">Simulation Benchmark</button>
-          <button class="competition-tab w-full rounded-xl border border-[var(--ink)]/10 bg-white/70 px-4 py-3 text-left font-semibold text-[var(--ink)]/80" data-tab="phases">Competition Phases</button>
-          <button class="competition-tab w-full rounded-xl border border-[var(--ink)]/10 bg-white/70 px-4 py-3 text-left font-semibold text-[var(--ink)]/80" data-tab="scoring">Scoring System</button>
-        </div>
-        <div class="rounded-2xl border border-[var(--ink)]/10 bg-white/90 p-6 shadow-sm">
-          <div class="competition-panel text-sm text-[var(--ink)]/80 leading-relaxed" data-panel="motivation">
-            <h3 class="text-lg font-semibold text-[var(--sea)]">Motivation</h3>
-            <p class="mt-3">
-              Autonomous indoor exploration is a fundamental capability for mobile robots in applications such as inspection, search and rescue, inventory, and digital-twin construction. Despite significant recent progress in exploration planning, it remains difficult to compare methods fairly because different works often rely on different simulators, sensing assumptions, and evaluation protocols. Inspired by recent benchmark-style indoor exploration work such as MapEx [1], this competition on indoor robot exploration provides a unified simulation platform for quantitative evaluation.
-            </p>
-            <p class="mt-3">
-              Compared with our previous aerial inspection challenge, this new competition lowers the barrier to entry and broadens participation from the exploration, planning, mapping, learning, and multi-robot communities. The competition emphasizes generalization to unseen indoor environments, efficient information gathering, and, in the multi-robot setting, coordination among robots with minimal redundant exploration.
-            </p>
-          </div>
-          <div class="competition-panel hidden text-sm text-[var(--ink)]/80 leading-relaxed" data-panel="tasks">
-            <h3 class="text-lg font-semibold text-[var(--sea)]">Task Descriptions</h3>
-            <p class="mt-3">
-              The competition considers autonomous exploration of previously unseen indoor environments such as office floors, corridors, and room-based layouts. Each team is required to design a software system that enables one or multiple robots to explore the environment online using onboard sensing and to build a useful map within a limited mission budget.
-            </p>
-            <p class="mt-3 font-semibold text-[var(--ink)]/85">Two competition tracks are included:</p>
-            <ul class="mt-2 space-y-2">
-              <li>Single-robot indoor exploration: A single robot must efficiently explore an unknown indoor map and maximize the amount of useful information collected within the allotted budget.</li>
-              <li>Multi-robot coordinated indoor exploration: A team of robots must collaboratively explore the same unknown indoor map. The robots are expected to share information and coordinate their motion so as to reduce redundant coverage and improve exploration efficiency.</li>
-            </ul>
-            <p class="mt-3">
-              The competition setup is adapted from recent indoor exploration benchmarks [1]. A standardized simulation interface and a public set of sample environments will be released to participants. The final competition evaluation will be conducted on several unrevealed indoor maps with the same interface and sensing assumptions, so that methods are assessed on both performance and generalization.
-            </p>
-          </div>
-          <div class="competition-panel hidden text-sm text-[var(--ink)]/80 leading-relaxed" data-panel="simulation">
-            <h3 class="text-lg font-semibold text-[var(--sea)]">Simulation Benchmark</h3>
-            <p class="mt-3">
-              A base simulation suite will be released publicly together with documentation, example maps, and submission instructions. The simulator will provide a common robot interface, sensing model, and map representation, allowing participants to focus on exploration, mapping, and coordination algorithms rather than simulator engineering.
-            </p>
-            <p class="mt-3">
-              The public release will include a development set for algorithm design and debugging, while the final ranking will be determined using hidden test maps not accessible to participants in advance. Participants will submit source code or executable packages to the organizers, and all submissions will be evaluated under a unified protocol.
-            </p>
-          </div>
-          <div class="competition-panel hidden text-sm text-[var(--ink)]/80 leading-relaxed" data-panel="phases">
-            <h3 class="text-lg font-semibold text-[var(--sea)]">Competition Phases</h3>
-            <p class="mt-3">
-              The competition consists of two rounds: a qualification round and a final round.
-            </p>
-            <p class="mt-3">
-              In the qualification round, participants will develop and test their methods using the public simulation suite and submit their code by the specified deadline. The submitted methods will be evaluated by the organizers on a set of unrevealed indoor maps. Based on the evaluation results, the top teams in each track will advance to the final round.
-            </p>
-            <p class="mt-3">
-              In the final round, finalist teams will be re-evaluated on additional unseen indoor maps under the official competition settings. The final winners of each track will be announced in conjunction with the workshop, and the champion teams will be invited to deliver a spotlight talk at the workshop venue to present their methods and findings.
-            </p>
-          </div>
-          <div class="competition-panel hidden text-sm text-[var(--ink)]/80 leading-relaxed" data-panel="scoring">
-            <h3 class="text-lg font-semibold text-[var(--sea)]">Scoring System</h3>
-            <p class="mt-3">
-              The exact scoring formula will be released together with the benchmark suite. In general, the competition score will reflect the following aspects:
-            </p>
-            <ul class="mt-2 space-y-2">
-              <li>Exploration performance: how much of the environment is successfully explored or observed;</li>
-              <li>Efficiency and coordination: how effectively the robot or robot team uses the mission budget, with additional consideration of coordination/communication requirements in the multi-robot track.</li>
-            </ul>
-            <p class="mt-3">
-              We may additionally include penalties for undesirable behaviors such as collisions, excessive redundancy, or failure to complete the mission.
-            </p>
-          </div>
-        </div>
-      </div>
+      <p class="mt-4 text-sm text-[var(--ink)]/70">
+        Indoor exploration benchmark and challenge track.
+      </p>
+
+      <p class="mt-2 text-xs text-[var(--ink)]/60">
+        See full details on the Competition page.
+      </p>
+    
+      
     </section>
 
-    <section class="mt-8">
-      <div class="rounded-2xl border border-[var(--ink)]/10 bg-white/80 p-6 shadow-sm">
+    <section class="mt-10 rounded-3xl border border-[var(--ink)]/10 bg-white/80 p-8 shadow-sm">
         <h2 class="text-xl font-semibold text-[var(--sea)]">Organizers</h2>
         <ul class="mt-4 space-y-2 text-sm text-[var(--ink)]/80">
           <li><strong>Shenghai Yuan</strong> — Nanyang Technological University</li>
@@ -177,52 +154,15 @@
           <li><strong>Guillaume Sartoretti</strong> — National University of Singapore</li>
           <li><strong>Brady Moon</strong> — Brigham Young University</li>
         </ul>
-      </div>
     </section>
 
-    <section class="mt-12 rounded-3xl border border-[var(--ink)]/10 bg-[var(--sea)]/10 p-8">
-      <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-        <div>
-          <h2 class="text-2xl font-semibold">Workshop Vision</h2>
-          <p class="mt-3 max-w-2xl text-[var(--ink)]/80">
-            By combining technical presentations with a benchmarking challenge, the workshop aims to stimulate discussion and accelerate progress in autonomous information gathering for real-world robotic systems.
-          </p>
-        </div>
-        <div class="rounded-2xl bg-white/80 px-6 py-4 text-sm shadow-sm">
-          <p class="font-semibold text-[var(--sea)]">Workshop Format</p>
-          <p class="mt-2 text-[var(--ink)]/70">Invited talks, poster presentations, and an open-source simulation competition.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="border-t border-[var(--ink)]/10 bg-white/70">
-    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-6 text-sm text-[var(--ink)]/70 sm:flex-row sm:items-center sm:justify-between">
-      <p>Contact: epettitt@byu.edu</p>
+    <div class="mx-auto max-w-6xl px-6 py-6 text-sm text-[var(--ink)]/70">
+      Contact: epettitt@byu.edu
     </div>
   </footer>
 
-  <script>
-    const tabButtons = document.querySelectorAll('.competition-tab');
-    const tabPanels = document.querySelectorAll('.competition-panel');
-
-    tabButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const target = button.dataset.tab;
-
-        tabButtons.forEach((btn) => {
-          const isActive = btn.dataset.tab === target;
-          btn.classList.toggle('bg-[var(--sea)]/10', isActive);
-          btn.classList.toggle('text-[var(--sea)]', isActive);
-          btn.classList.toggle('bg-white/70', !isActive);
-          btn.classList.toggle('text-[var(--ink)]/80', !isActive);
-        });
-
-        tabPanels.forEach((panel) => {
-          panel.classList.toggle('hidden', panel.dataset.panel !== target);
-        });
-      });
-    });
-  </script>
 </body>
 </html>

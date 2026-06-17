@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IROS 2026 IIG Workshop - Competition</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --ink: #0b1b1e;
+      --sea: #1f6f78;
+    }
+
+    body {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      background: #f7f1e8;
+      color: var(--ink);
+    }
+
+    .top-nav-link.active {
+      background: rgba(255,255,255,0.95);
+      color: var(--sea);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen">
+
+  <!-- Top Navigation -->
+  <nav class="sticky top-0 z-50 border-b border-[var(--ink)]/10 bg-white/75 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div class="text-sm font-semibold text-[var(--sea)]">
+        IROS 2026 IIG Workshop
+      </div>
+
+      <div class="flex gap-3 rounded-full border border-[var(--ink)]/10 bg-white/60 p-1">
+        <a href="index.html"
+           class="top-nav-link rounded-full px-5 py-2 text-sm font-semibold text-[var(--ink)]/70 hover:bg-white/80">
+          Main
+        </a>
+
+        <a href="competition.html"
+           class="top-nav-link active rounded-full px-5 py-2 text-sm font-semibold">
+          Competition
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mx-auto max-w-6xl px-6 py-14">
+
+    <section class="rounded-3xl border border-[var(--ink)]/10 bg-white/80 p-8 shadow-sm">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center rounded-full border border-[var(--ink)]/10 bg-[var(--sea)]/10 px-4 py-2 text-sm font-semibold text-[var(--sea)]">
+          Competition Page
+        </div>
+
+        <h1 class="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
+          Indoor Exploration Benchmark and Challenge
+        </h1>
+
+        <p class="mt-6 text-lg leading-relaxed text-[var(--ink)]/80">
+          This page contains competition-specific information, benchmark details,
+          and future submission instructions for participants.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-10 rounded-3xl border border-[var(--ink)]/10 bg-white/80 p-8 shadow-sm">
+      <h2 class="text-2xl font-semibold text-[var(--sea)]">
+        Competition Overview
+      </h2>
+
+      <p class="mt-4 text-sm leading-relaxed text-[var(--ink)]/80">
+        Additional competition details, schedules, benchmark downloads,
+        evaluation criteria, and submission procedures can be added here later.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-[var(--ink)]/10 bg-white/70">
+    <div class="mx-auto max-w-6xl px-6 py-6 text-sm text-[var(--ink)]/70">
+      Contact: epettitt@byu.edu
+    </div>
+  </footer>
+
+</body>
+</html>

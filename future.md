@@ -1,0 +1,64 @@
+Title
+
+The Workshop and Competition on Intelligent Information Gathering for Single and Multi-Robot Systems
+
+Short Title
+
+IROS 2026 IIG Workshop
+
+
+Abstract
+
+Intelligent information gathering is a central capability for autonomous robots, enabling applications such as search and rescue, inspection, reconnaissance, environmental monitoring, and mapping. These tasks require robots to reason about where to sense next to maximize the value of collected information under limited time, energy, and communication constraints. From an algorithmic perspective, this problem lies at the **intersection of active perception, exploration planning, and decision-making under uncertainty**. Compared to related past workshop events, this workshop seeks to expand the scope to a broader set of information-gathering problems and introduces an accessible competition platform with minimal setup requirements. By combining technical presentations with a benchmarking challenge, the workshop aims to stimulate discussion and accelerate progress in autonomous information gathering for real-world robotic systems.  
+The event combines **invited talks** from academia and industry experts presenting recent progress, **poster presentations** for invited workshop paper submissions, and an **open-source simulation competition** focused on indoor exploration. The competition includes both single-robot and multi-robot tracks to encourage broad participation and highlight challenges in exploration performance, mission efficiency, and coordination under communication constraints. Participants will evaluate algorithms based on coverage of previously unknown environments and efficient use of mission budgets, with the winners of the challenge also presenting their approaches as part of the workshop program. 
+
+Call for papers
+
+Prospective authors are invited to submit high-quality papers representing original work. Innovative submissions in all areas of information gathering are welcome. Accepted papers will be presented in an interactive poster session at the IROS 2026 conference and hosted on the workshop website (non-archival).
+
+Papers should be up to \_ pages in length including all appendices. All papers must be in English and submitted electronically in PDF format via \_\_\_\_\_\_. Formatting guidelines match the conference format and use of their template is recommended. 
+
+[LaTeX Template](https://ras.papercept.net/conferences/support/tex.php)  
+[MS Word Template](https://ras.papercept.net/conferences/support/word.php)
+
+Author names and affiliations should be redacted from the submitted PDF. For LaTeX documents, we suggest using the “censor” package. Please refer to the Rules for the Double-Anonymous Review Process from IEEE Robotics and Automation Society (RAS).
+
+Speakers
+
+**Kostas Alexis**, Department of Engineering Cybernetics, Norwegian University of Science and Technology, Norway
+
+**Jen Jen Chung**, School of Electrical Engineering and Computer Science, The University of Queensland, Australia
+
+**Sebastian Scherer**, Robotics Institute, Carnegie Mellon University, USA
+
+**Michael Kaess**, Pittsburgh startup ‘Aquatonomy’ (also Robotics Institute, Carnegie Mellon University), USA
+
+**Boyu Zhou**, Department of Mechanical and Energy Engineering, Southern University of Science and Technology, China
+
+**Marija Popović**, Control and Operations Department, Delft University of Technology, Netherlands
+
+### Competition outline
+
+Introduction  
+How to participate  
+Important Dates  
+Prize  
+Installation  
+The benchmark design  
+The robot fleet  
+Exploration scenarios  
+Scoring  
+Developing your scheme  
+Ground rules  
+Communication network  
+Baseline Method  
+Organizers  
+Citation
+
+list of emails  
+seungch2@andrew.cmu.edu  
+muqingc@andrew.cmu.edu  
+seungch2@andrew.cmu.edu  
+caoyuhong@u.nus.edu  
+guillaume.sartoretti@nus.edu.sg   
+brady.moon@byu.edu 

@@ -1,0 +1,19 @@
+---
+const {
+  title = "The Workshop and Competition on Intelligent Information Gathering for Single and Multi-Robot Systems",
+  shortTitle = "IROS 2026 IIG Workshop",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{shortTitle}</title>
+    <meta name="description" content={title} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

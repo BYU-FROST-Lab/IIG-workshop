@@ -2,8 +2,41 @@
 const { shortTitle = "IROS 2026 IIG Workshop" } = Astro.props;
 ---
 
-<nav aria-label="Primary">
-  <a href="/">{shortTitle}</a>
-  <a href="/">Main</a>
-  <a href="/competition">Competition</a>
+<nav
+  aria-label="Primary"
+  class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl"
+>
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 sm:px-8 lg:px-10">
+    <a href="/" class="group flex items-center gap-3">
+      <span class="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/25 bg-cyan-300/10 text-sm font-semibold text-cyan-100 shadow-lg shadow-cyan-950/30 transition group-hover:border-cyan-300/40 group-hover:bg-cyan-300/15">
+        IIG
+      </span>
+      <div class="min-w-0">
+        <p class="truncate text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/70">
+          Workshop site
+        </p>
+        <p class="truncate text-sm font-semibold text-white">
+          {shortTitle}
+        </p>
+      </div>
+    </a>
+
+    <div class="flex items-center gap-2 sm:gap-3">
+      <a
+        href="/"
+        class="rounded-full border border-transparent px-4 py-2 text-sm font-medium text-slate-300 transition hover:border-white/10 hover:bg-white/5 hover:text-white"
+      >
+        Home
+      </a>
+      <a
+        href="/competition"
+        class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:border-cyan-300/30 hover:bg-cyan-300/10"
+      >
+        Competition
+      </a>
+      <span class="hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-300 sm:inline-flex">
+        Placeholder details to be added
+      </span>
+    </div>
+  </div>
 </nav>

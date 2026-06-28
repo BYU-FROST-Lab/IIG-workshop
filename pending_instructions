@@ -1,6 +1,0 @@
-You are an astro and tailwindcss expert. Using the current directory structure create a beutiful navbar and hero component. The background should be a quiet beutiful dark colored gradient background. Appropriate content including title and short title and abstract can be aquired from the content.md file.
-
-Use a module structure and astro best practices. 
-
-After finishing the two components place them into the main page using the mainlayout.astro file and the index.astro file.
-

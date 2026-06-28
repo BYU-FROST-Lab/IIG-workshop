@@ -1,0 +1,99 @@
+---
+import speakerOne from "../../images/organizers/brady_moon.jpg";
+import speakerTwo from "../../images/organizers/elijah_pettitt.jpg";
+import speakerThree from "../../images/organizers/guillaume_sartoretti.png";
+import speakerFour from "../../images/organizers/muqing_cao.png";
+import speakerFive from "../../images/organizers/seungchan_kim.png";
+import speakerSix from "../../images/organizers/shenghai_yuan.png";
+
+const speakers = [
+  speakerOne,
+  speakerTwo,
+  speakerThree,
+  speakerFour,
+  speakerFive,
+  speakerSix,
+].map((image, index) => ({
+  image,
+  slot: `Speaker ${String(index + 1).padStart(2, "0")}`,
+}));
+---
+
+<section
+  id="speakers"
+  aria-labelledby="speakers-title"
+  class="relative isolate overflow-hidden bg-[linear-gradient(180deg,_#f8fafc_0%,_#eef2ff_52%,_#ffffff_100%)] py-20 text-slate-900 sm:py-24"
+>
+  <div class="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+  <div class="absolute left-[-7rem] top-16 -z-10 h-72 w-72 rounded-full bg-cyan-300/15 blur-3xl"></div>
+  <div class="absolute right-[-8rem] top-32 -z-10 h-80 w-80 rounded-full bg-violet-300/15 blur-3xl"></div>
+
+  <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+    <div class="max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.32em] text-cyan-700/80">
+        Speakers
+      </p>
+      <h2
+        id="speakers-title"
+        class="mt-4 text-4xl font-semibold tracking-[-0.05em] text-balance text-slate-950 sm:text-5xl"
+      >
+        Speaker cards with temporary portraits and placeholder content.
+      </h2>
+      <p class="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+        These cards are formatted for the final invited-speaker lineup. For now they use organizer images as stand-ins and only descriptive placeholder copy so the page stays honest while the speaker list is still being finalized.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      {speakers.map((speaker) => (
+        <article class="group relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-slate-950 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.75)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_40px_95px_-45px_rgba(15,23,42,0.85)]">
+          <div class="relative h-[30rem]">
+            <img
+              src={speaker.image.src}
+              alt={`${speaker.slot} temporary portrait placeholder`}
+              class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-[linear-gradient(180deg,_rgba(15,23,42,0.05)_0%,_rgba(15,23,42,0.22)_42%,_rgba(15,23,42,0.9)_100%)]"></div>
+
+            <div class="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-5">
+              <span class="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white/80 backdrop-blur">
+                Temporary image
+              </span>
+              <span class="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-cyan-100 backdrop-blur">
+                {speaker.slot}
+              </span>
+            </div>
+
+            <div class="absolute inset-x-0 bottom-0 p-5">
+              <div class="inline-flex items-center gap-2 rounded-full border border-violet-300/20 bg-violet-300/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-violet-100 backdrop-blur">
+                Invited talk placeholder
+              </div>
+
+              <h3 class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">
+                Speaker name placeholder
+              </h3>
+
+              <p class="mt-2 text-sm font-medium text-slate-200/85">
+                Affiliation or role placeholder
+              </p>
+
+              <p class="mt-4 max-w-sm text-sm leading-6 text-slate-300">
+                Replace this card with a confirmed name, talk title, short biography, and any official links once the speaker lineup is finalized.
+              </p>
+
+              <div class="mt-5 flex flex-wrap gap-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-300">
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                  Bio placeholder
+                </span>
+                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                  Talk title placeholder
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -8,15 +8,16 @@ Remove all text on speakers except for bottom two circles
 
 We are working on developing a stylish and modern conference workshop website. We are doing this incrementally. 
 
-The task is to make a call for papers component look really good.
+The task is to make a competition component look really good.
 
-The call for papers section of the webpage should have really good looking formating.
+The competition section of the webpage should have really good looking formating.
 
-The call for papers component should be placed below the schedule component and above the organizers.
+The competition component should be placed below the call for papers section and before the organizers.
 
 Do not work on any other part of the website right now.
 
 Feel free to add appropriate placeholder content. But do NOT make believable fake content. ONLY include descriptive placeholders about what content should be added. 
+
 
 
 

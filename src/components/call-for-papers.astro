@@ -1,0 +1,128 @@
+---
+const templates = [
+  {
+    label: "LaTeX Template",
+    note: "Placeholder link for the final LaTeX submission template.",
+    href: "#latex-template-placeholder",
+  },
+  {
+    label: "Microsoft Word Template",
+    note: "Placeholder link for the final Word submission template.",
+    href: "#word-template-placeholder",
+  },
+];
+---
+
+<section
+  id="call-for-papers"
+  aria-labelledby="call-for-papers-title"
+  class="relative isolate overflow-hidden bg-[linear-gradient(180deg,_#ffffff_0%,_#f8fafc_40%,_#eef2ff_100%)] py-20 text-slate-900 sm:py-24"
+>
+  <div class="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+  <div class="absolute left-[-7rem] top-16 -z-10 h-72 w-72 rounded-full bg-cyan-300/15 blur-3xl"></div>
+  <div class="absolute right-[-8rem] top-24 -z-10 h-80 w-80 rounded-full bg-violet-300/15 blur-3xl"></div>
+
+  <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+    <div class="max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.32em] text-cyan-700/80">
+        Call for Papers
+      </p>
+      <h2
+        id="call-for-papers-title"
+        class="mt-4 text-4xl font-semibold tracking-[-0.05em] text-balance text-slate-950 sm:text-5xl"
+      >
+        A polished submission section with honest placeholders for the final CFP details.
+      </h2>
+      <p class="mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+        Prospective authors are invited to submit high-quality papers representing original work. Innovative submissions in all areas of information gathering are welcome. Accepted papers will be presented in an interactive poster session at the IROS 2026 conference and hosted on the workshop website as non-archival submissions.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 lg:grid-cols-[1.3fr_0.9fr]">
+      <article class="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_30px_80px_-40px_rgba(15,23,42,0.18)]">
+        <div class="border-b border-slate-200/80 px-6 py-5 sm:px-8">
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-cyan-700/80">
+            Submission overview
+          </p>
+          <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-slate-950">
+            What authors should prepare
+          </h3>
+        </div>
+
+        <div class="space-y-6 px-6 py-6 sm:px-8 sm:py-8">
+          <div class="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+              Paper length
+            </p>
+            <p class="mt-3 text-base leading-7 text-slate-700">
+              Papers should be up to _ pages in length including all appendices.
+            </p>
+          </div>
+
+          <div class="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+              Submission format
+            </p>
+            <p class="mt-3 text-base leading-7 text-slate-700">
+              All papers must be in English and submitted electronically in PDF format via ______. Use of the conference template is recommended.
+            </p>
+          </div>
+
+          <div class="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+              Review note
+            </p>
+            <p class="mt-3 text-base leading-7 text-slate-700">
+              Replace this note with the final review-policy text once the submission process is confirmed. Keep any anonymity guidance visible here so authors can find it quickly.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <aside class="space-y-6">
+        <div class="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-[linear-gradient(180deg,_#0f172a_0%,_#111827_100%)] p-6 text-white shadow-[0_30px_80px_-40px_rgba(15,23,42,0.5)] sm:p-8">
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/70">
+            Downloadable files
+          </p>
+          <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-white">
+            Template links
+          </h3>
+          <p class="mt-4 text-sm leading-6 text-slate-300">
+            These are placeholder links for the final template files. Replace the targets when the official resources are ready.
+          </p>
+
+          <div class="mt-6 space-y-3">
+            {templates.map((template) => (
+              <a
+                href={template.href}
+                class="group flex items-center justify-between gap-4 rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4 transition duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+                aria-label={`${template.label} placeholder link`}
+              >
+                <div class="min-w-0">
+                  <span class="block text-base font-semibold tracking-[-0.02em] text-white">
+                    {template.label}
+                  </span>
+                  <span class="mt-1 block text-sm leading-6 text-slate-300">
+                    {template.note}
+                  </span>
+                </div>
+                <span class="inline-flex shrink-0 items-center rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-cyan-100 transition group-hover:bg-cyan-300/15">
+                  Placeholder
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="rounded-[2rem] border border-slate-200/80 bg-white p-6 shadow-[0_24px_70px_-40px_rgba(15,23,42,0.22)] sm:p-8">
+          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-violet-700/80">
+            Practical reminder
+          </p>
+          <p class="mt-3 text-base leading-7 text-slate-600">
+            Keep any placeholder fields visibly marked until the final submission instructions, deadlines, and review details are confirmed.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

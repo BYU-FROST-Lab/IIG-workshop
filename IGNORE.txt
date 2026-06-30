@@ -1,54 +1,25 @@
-Title
 
-The Workshop and Competition on Intelligent Information Gathering for Single and Multi-Robot Systems
 
-Short Title
+Add Date to hero: Sunday Sept 27, 8:00 - 12:30
 
-IROS 2026 IIG Workshop
-
-Date is Sunday Sept 27, 8:00 - 12:30
+Remove all text on speakers except for bottom two circles
 
 
 
 We are working on developing a stylish and modern conference workshop website. We are doing this incrementally. 
 
-The task is to make a schedule section component look really good.
+The task is to make a call for papers component look really good.
 
-The schedule section of the webpage should have really good looking formating.
+The call for papers section of the webpage should have really good looking formating.
 
-An example is provided of the type of speaker block styling that should inspire the design.
-
-The schedule component should be placed below the speakers component.
+The call for papers component should be placed below the schedule component and above the organizers.
 
 Do not work on any other part of the website right now.
 
 Feel free to add appropriate placeholder content. But do NOT make believable fake content. ONLY include descriptive placeholders about what content should be added. 
 
-You may use the organizers images for the moment until we aquire individual speaker images. There are 6 speakers.
 
 
-Time
-Events
-8:30 - 8:45
-Chair Opening Remarks
-8:45 - 9:10
-Invited Talk 1
-9:10 - 9:35
-Invited Talk 2
-9:35 - 10:00
-Invited Talk 3
-10:00 - 10:25
-Invited Talk 4
-10:25 - 10:50
-Coffee Break and Poster Session
-10:50 - 11:15
-Invited Talk 5
-11:15 - 11:40
-Invited Talk 6
-11:40 - 12:05
-Challenge Champion Presentations
-12:05 - 12:30
-Panel Discussion and Conclusion
 
 
 

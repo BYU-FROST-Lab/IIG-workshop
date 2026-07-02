@@ -38,6 +38,8 @@ Images are in the images/speakers folder.
 
 Do not work on any other part of the website right now.
 
+Do not run the build command.
+
 
 
 

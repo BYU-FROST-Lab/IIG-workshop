@@ -1,22 +1,43 @@
 ---
-import speakerOne from "../../images/organizers/brady_moon.jpg";
-import speakerTwo from "../../images/organizers/elijah_pettitt.jpg";
-import speakerThree from "../../images/organizers/guillaume_sartoretti.png";
-import speakerFour from "../../images/organizers/muqing_cao.png";
-import speakerFive from "../../images/organizers/seungchan_kim.png";
-import speakerSix from "../../images/organizers/shenghai_yuan.png";
+import boyuZhou from "../../images/speakers/boyu_zhou.png";
+import jenJenChung from "../../images/speakers/jen_jen_chung.png";
+import kostasAlexis from "../../images/speakers/kostas_alexis.png";
+import marijaPopovic from "../../images/speakers/marija_popovic.png";
+import michaelKaess from "../../images/speakers/michael_kaess.png";
+import sebastianScherer from "../../images/speakers/sebastian_scherer.png";
 
 const speakers = [
-  speakerOne,
-  speakerTwo,
-  speakerThree,
-  speakerFour,
-  speakerFive,
-  speakerSix,
-].map((image, index) => ({
-  image,
-  slot: `Speaker ${String(index + 1).padStart(2, "0")}`,
-}));
+  {
+    image: kostasAlexis,
+    name: "Kostas Alexis",
+    affiliation: "Norwegian University of Science and Technology, Norway",
+  },
+  {
+    image: jenJenChung,
+    name: "Jen Jen Chung",
+    affiliation: "The University of Queensland, Australia",
+  },
+  {
+    image: sebastianScherer,
+    name: "Sebastian Scherer",
+    affiliation: "Carnegie Mellon University, USA",
+  },
+  {
+    image: michaelKaess,
+    name: "Michael Kaess",
+    affiliation: "Pittsburgh startup Aquatonomy, USA",
+  },
+  {
+    image: boyuZhou,
+    name: "Boyu Zhou",
+    affiliation: "Southern University of Science and Technology, China",
+  },
+  {
+    image: marijaPopovic,
+    name: "Marija Popović",
+    affiliation: "Delft University of Technology, Netherlands",
+  },
+];
 ---
 
 <section
@@ -50,41 +71,23 @@ const speakers = [
           <div class="relative h-[30rem]">
             <img
               src={speaker.image.src}
-              alt={`${speaker.slot} temporary portrait placeholder`}
+              alt={speaker.name}
               class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-[linear-gradient(180deg,_rgba(15,23,42,0.05)_0%,_rgba(15,23,42,0.22)_42%,_rgba(15,23,42,0.9)_100%)]"></div>
 
-            <div class="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-5">
-              <span class="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white/80 backdrop-blur">
-                Temporary image
-              </span>
-              <span class="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-cyan-100 backdrop-blur">
-                {speaker.slot}
-              </span>
-            </div>
-
             <div class="absolute inset-x-0 bottom-0 p-5">
-              <div class="inline-flex items-center gap-2 rounded-full border border-violet-300/20 bg-violet-300/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-violet-100 backdrop-blur">
-                Invited talk placeholder
-              </div>
-
               <h3 class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">
-                Speaker name placeholder
+                {speaker.name}
               </h3>
 
               <p class="mt-2 text-sm font-medium text-slate-200/85">
-                Affiliation or role placeholder
+                Talk Title Placeholder
               </p>
 
-              <div class="mt-5 flex flex-wrap gap-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-300">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                  Bio placeholder
-                </span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                  Talk title placeholder
-                </span>
+              <div class="mt-5 inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-300 backdrop-blur">
+                {speaker.affiliation}
               </div>
             </div>
           </div>

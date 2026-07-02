@@ -12,6 +12,8 @@ The task is to make a competition component look really good.
 
 The competition section of the webpage should have really good looking formating.
 
+There is an image that should be included that is wider than tall. images/competition_image.png
+
 The competition component should be placed below the call for papers section and before the organizers.
 
 Do not work on any other part of the website right now.
@@ -43,17 +45,17 @@ Author names and affiliations should be redacted from the submitted PDF. For LaT
 
 Speakers
 
-**Kostas Alexis**, Department of Engineering Cybernetics, Norwegian University of Science and Technology, Norway
+**Kostas Alexis**, Norwegian University of Science and Technology, Norway
 
-**Jen Jen Chung**, School of Electrical Engineering and Computer Science, The University of Queensland, Australia
+**Jen Jen Chung**, The University of Queensland, Australia
 
-**Sebastian Scherer**, Robotics Institute, Carnegie Mellon University, USA
+**Sebastian Scherer**, Carnegie Mellon University, USA
 
-**Michael Kaess**, Pittsburgh startup ‘Aquatonomy’ (also Robotics Institute, Carnegie Mellon University), USA
+**Michael Kaess**, Pittsburgh startup ‘Aquatonomy’, USA
 
-**Boyu Zhou**, Department of Mechanical and Energy Engineering, Southern University of Science and Technology, China
+**Boyu Zhou**, Southern University of Science and Technology, China
 
-**Marija Popović**, Control and Operations Department, Delft University of Technology, Netherlands
+**Marija Popović**, Delft University of Technology, Netherlands
 
 ### Competition outline
 

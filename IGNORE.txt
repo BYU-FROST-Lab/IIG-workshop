@@ -24,17 +24,12 @@ Feel free to add appropriate placeholder content. But do NOT make believable fak
 
 We are working on developing a stylish and modern conference workshop website. We are doing this incrementally. 
 
-The task is to replace all the placeholder images in the speakers section with the real speaker images.
+The task is to move the 'Suggested hero panels' block lower and allow the title to extend across the whole page so it is easier to look at and clearer to read.
 
-Update the Speaker names, institution and nation with the information contained below. 
+Rework the 'Suggested hero Panels' tile. 
+Bold the Invited Talks, poster presentations, and open-source simulation competition in the summary.
 
-Put the Institution and nation in the lowest bubble at the bottom of each image.
 
-Change the 'Affiliation or role placeholder' placeholder with the text 'Talk Title Placeholder'.
-
-Remove the other 4 bubbles from the speakers tiles ie. Temporary image, Speaker 01, Invited talk placeholder, Bio placeholder
-
-Images are in the images/speakers folder.
 
 Do not work on any other part of the website right now.
 

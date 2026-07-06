@@ -24,17 +24,8 @@ Feel free to add appropriate placeholder content. But do NOT make believable fak
 
 We are working on developing a stylish and modern conference workshop website. We are doing this incrementally. 
 
-The task is to move the 'Suggested hero panels' block lower and allow the title to extend across the whole page so it is easier to look at and clearer to read.
-
-Rework the 'Suggested hero Panels' tile. 
-Bold the Invited Talks, poster presentations, and open-source simulation competition in the summary.
-link program details button in the hero component to the schedule section of the website
-link the Competition button on the hero component to the competition section of the main page of the website NOT the main competition page
-Replace each "session label kept as provided ..." paragraph in the schedule with Title Pending
-Insert each talk name into the placeholder Invited Talk 1, Invited Talk 2 etc
-Replace the ___ for PDF submission with saying submit here with here being a link to https://docs.google.com/forms/d/e/1FAIpQLScdd2xMSqVevQUHkBbH7cbntlAoH9oIMkbsY5k9-345UZAh1Q/viewform?usp=header
-Replace the _ number of pages with 6 pages
-Remove the astro mapping for the two paper templates and just hard code both options. Format it better for just providing both links without descriptions.
+Add the link to the latex template https://ras.papercept.net/conferences/support/tex.php
+add the link to the microsoft word template https://ras.papercept.net/conferences/support/word.php
 
 
 Do not work on any other part of the website right now.
@@ -44,10 +35,8 @@ Do not run the build command.
 Do not read the IGNORE.txt file as it includes instructions that are not relevant to you.
 
 
-Use of the conference templates are not required and are provided for convience.
 
-
-Restructure the home page competition page to have just a few details and then a prominent button linking to the competition page
+Add bio overlay when speakers are hovered over or clicked and disapear when cursor moves off or clicked again
 
 
 Abstract

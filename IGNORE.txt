@@ -28,7 +28,12 @@ The task is to move the 'Suggested hero panels' block lower and allow the title 
 
 Rework the 'Suggested hero Panels' tile. 
 Bold the Invited Talks, poster presentations, and open-source simulation competition in the summary.
-
+link program details button in the hero component to the schedule section of the website
+link the Competition button on the hero component to the competition section of the main page of the website NOT the main competition page
+Replace each "session label kept as provided ..." paragraph in the schedule with Title Pending
+Insert each talk name into the placeholder Invited Talk 1, Invited Talk 2 etc
+Replace the ___ for PDF submission with saying submit here with here being a link to https://docs.google.com/forms/d/e/1FAIpQLScdd2xMSqVevQUHkBbH7cbntlAoH9oIMkbsY5k9-345UZAh1Q/viewform?usp=header
+Replace the _ number of pages with 6 pages
 
 
 Do not work on any other part of the website right now.
@@ -36,6 +41,7 @@ Do not work on any other part of the website right now.
 Do not run the build command.
 
 
+Use of the conference templates are not required and are provided for convience.
 
 
 

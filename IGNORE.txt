@@ -34,6 +34,7 @@ Replace each "session label kept as provided ..." paragraph in the schedule with
 Insert each talk name into the placeholder Invited Talk 1, Invited Talk 2 etc
 Replace the ___ for PDF submission with saying submit here with here being a link to https://docs.google.com/forms/d/e/1FAIpQLScdd2xMSqVevQUHkBbH7cbntlAoH9oIMkbsY5k9-345UZAh1Q/viewform?usp=header
 Replace the _ number of pages with 6 pages
+Remove the astro mapping for the two paper templates and just hard code both options. Format it better for just providing both links without descriptions.
 
 
 Do not work on any other part of the website right now.
@@ -43,6 +44,8 @@ Do not run the build command.
 
 Use of the conference templates are not required and are provided for convience.
 
+
+Restructure the home page competition page to have just a few details and then a prominent button linking to the competition page
 
 
 Abstract

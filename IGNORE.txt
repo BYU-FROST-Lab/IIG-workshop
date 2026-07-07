@@ -26,12 +26,7 @@ We are working on developing a stylish and modern conference workshop website. W
 
 You are now in the stage of making small content and visual corrections. Do not make major changes to the website.
 
-Add the link to the latex template https://ras.papercept.net/conferences/support/tex.php
-add the link to the microsoft word template https://ras.papercept.net/conferences/support/word.php
-Make the Aug 13 deadline and Sept 1 release text bolded
-In the dark contribution box in the Competition component, add a distinct "View Instructions" button that links to the competition page
-In the dark contribution box in the Competition component, add a link to the  "Competition Registration" https://docs.google.com/forms/d/e/1FAIpQLScD6Hycd1pdfG-7pKvoI4aF5QKfz0Begf4qTrSa18z3usI2pQ/viewform?usp=header
-The competition theme only fills half of the provided space. It should be wider to fit its width underneath the image.
+Move the template links to the Submission Format division. Change the formatting accordingly.
 
 Do not work on any other part of the website right now.
 

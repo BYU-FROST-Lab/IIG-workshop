@@ -8,13 +8,49 @@ import organizerSix from "../../images/organizers/shenghai_yuan.png";
 import organizerSeven from "../../images/organizers/yuhong_cao.webp";
 
 const organizers = [
-  { image: organizerOne, name: "Brady Moon" },
-  { image: organizerTwo, name: "Elijah Pettitt" },
-  { image: organizerThree, name: "Guillaume Sartoretti" },
-  { image: organizerFour, name: "Muqing Cao" },
-  { image: organizerFive, name: "Seungchan Kim" },
-  { image: organizerSix, name: "Shenghai Yuan" },
-  { image: organizerSeven, name: "Yuhong Cao" },
+  {
+    image: organizerSix,
+    name: "Shenghai Yuan",
+    website: "https://snakehaihai.github.io",
+    email: "shyuan@ntu.edu.sg",
+  },
+  {
+    image: organizerTwo,
+    name: "Elijah Pettitt",
+    website: "https://frostlab.byu.edu",
+    email: "epettitt@byu.edu",
+    corresponding: true,
+  },
+  {
+    image: organizerFour,
+    name: "Muqing Cao",
+    website: "https://caomuqing.github.io",
+    email: "muqingc@andrew.cmu.edu",
+  },
+  {
+    image: organizerFive,
+    name: "Seungchan Kim",
+    website: "https://seungchan-kim.github.io",
+    email: "seungch2@andrew.cmu.edu",
+  },
+  {
+    image: organizerSeven,
+    name: "Cao Yuhong",
+    website: "https://yuhongcao.online",
+    email: "caoyuhong@u.nus.edu",
+  },
+  {
+    image: organizerThree,
+    name: "Guillaume Sartoretti",
+    website: "https://marmotlab.org",
+    email: "guillaume.sartoretti@nus.edu.sg",
+  },
+  {
+    image: organizerOne,
+    name: "Brady Moon",
+    website: "https://bradymoon.com",
+    email: "brady.moon@byu.edu",
+  },
 ];
 ---
 
@@ -45,7 +81,10 @@ const organizers = [
 
     <div class="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
       {organizers.map((organizer) => (
-        <article class="group relative overflow-hidden rounded-[2rem] border border-slate-200/80 bg-slate-950 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_40px_95px_-45px_rgba(15,23,42,0.28)]">
+        <article class:list={[
+          "group relative overflow-hidden rounded-[2rem] border bg-slate-950 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_40px_95px_-45px_rgba(15,23,42,0.28)]",
+          organizer.corresponding ? "border-cyan-300/70 ring-1 ring-cyan-300/50" : "border-slate-200/80",
+        ]}>
           <div class="relative h-[28rem]">
             <img
               src={organizer.image.src}
@@ -55,36 +94,39 @@ const organizers = [
             />
             <div class="absolute inset-0 bg-[linear-gradient(180deg,_rgba(15,23,42,0.02)_0%,_rgba(15,23,42,0.18)_38%,_rgba(15,23,42,0.92)_100%)]"></div>
 
-            <div class="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-5">
-              <span class="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white/80 backdrop-blur">
-                Organizer
-              </span>
-            </div>
+            {organizer.corresponding && (
+              <div class="absolute left-4 top-4 h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_0_8px_rgba(103,232,249,0.18)]"></div>
+            )}
 
             <div class="absolute inset-x-0 bottom-0 p-5">
-              <div class="inline-flex items-center gap-2 rounded-full border border-violet-300/20 bg-violet-300/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-violet-100 backdrop-blur">
-                Organizer role placeholder
-              </div>
-
-              <h3 class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-white">
+              <h3 class="text-2xl font-semibold tracking-[-0.03em] text-white">
                 {organizer.name}
               </h3>
 
-              <p class="mt-2 text-sm font-medium text-slate-200/85">
-                Affiliation or committee title placeholder
-              </p>
-
-              <p class="mt-4 max-w-sm text-sm leading-6 text-slate-300">
-                Replace this card with the confirmed organizer information, and use this space for a short role summary or bio note.
-              </p>
-
-              <div class="mt-5 flex flex-wrap gap-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-300">
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                  Role placeholder
-                </span>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                  Bio placeholder
-                </span>
+              <div class="mt-4 flex items-center gap-3">
+                <a
+                  href={organizer.website}
+                  class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/90 backdrop-blur transition hover:bg-white/20 hover:text-white"
+                  aria-label={`Visit ${organizer.name}'s website`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 21a9 9 0 1 0-9-9" />
+                    <path d="M3 12h18" />
+                    <path d="M12 3c2.5 2.7 4 5.7 4 9s-1.5 6.3-4 9c-2.5-2.7-4-5.7-4-9s1.5-6.3 4-9Z" />
+                  </svg>
+                </a>
+                <a
+                  href={`mailto:${organizer.email}`}
+                  class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white/90 backdrop-blur transition hover:bg-white/20 hover:text-white"
+                  aria-label={`Email ${organizer.name}`}
+                >
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="m3 7 9 6 9-6" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

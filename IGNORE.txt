@@ -57,22 +57,6 @@ Brady Moon - https://bradymoon.com - brady.moon@byu.edu
 
 
 
-Competitiors are invited to join and submit methods to explore autonomously in an open-source indoor simulation environment. The competition winner will present their method at the workshop.
-
-Submissions are due Aug 13, 2026 at midnight local time.
-
-Competition Rankings will be released Sept 1, 2026
-
-View Instructions
-
-Link to the competition registration https://docs.google.com/forms/d/e/1FAIpQLScD6Hycd1pdfG-7pKvoI4aF5QKfz0Begf4qTrSa18z3usI2pQ/viewform?usp=header
-
-Tracks
-Single-robot indoor exploration: A single robot must efficiently explore an unknown indoor map and maximize the amount of useful information collected within the allotted budget.
-Multi-robot coordinated indoor exploration: A team of robots must collaboratively explore the same unknown indoor map. The robots are expected to share information and coordinate their motion so as to reduce redundant coverage and improve exploration efficiency.
-
-
-
 Deadline for Paper Submissions, Deadline for Competition Submissions- Aug 13
 Notice of Competitors Progressing to Final Round - Aug 24
 Notice for Paper Acceptance, Notice for Competition Submissions - Sept 1

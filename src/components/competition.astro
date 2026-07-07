@@ -56,7 +56,7 @@ const tracks = [
         </div>
 
         <div class="border-t border-slate-200/80 p-6 sm:p-8">
-          <div class="grid gap-4 sm:grid-cols-2">
+          <div class="w-full">
             <div class="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
               <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
                 Competition theme
@@ -98,12 +98,25 @@ const tracks = [
             <div class="rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4">
               <p class="text-sm font-semibold text-white">Deadlines</p>
               <p class="mt-1 text-sm leading-6 text-slate-300">
-                Submissions are due Aug 13, 2026 at midnight local time.
+                Submissions are due <strong class="font-semibold text-white">Aug 13, 2026</strong> at midnight local time.
 
-                Competition Rankings will be released Sept 1, 2026
+                Competition Rankings will be released <strong class="font-semibold text-white">Sept 1, 2026</strong>
               </p>
             </div>
-            
+
+            <a
+              href="/competition"
+              class="flex items-center justify-center rounded-[1.25rem] border border-cyan-300/30 bg-cyan-400/15 px-4 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-400/25"
+            >
+              View Instructions
+            </a>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScD6Hycd1pdfG-7PkvoI4aF5QKfz0Begf4qTrSa18z3usI2pQ/viewform?usp=header"
+              class="flex items-center justify-center rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+            >
+              Competition Registration
+            </a>
           </div>
         </div>
       </aside>

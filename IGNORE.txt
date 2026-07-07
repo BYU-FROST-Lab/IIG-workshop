@@ -24,6 +24,8 @@ Feel free to add appropriate placeholder content. But do NOT make believable fak
 
 We are working on developing a stylish and modern conference workshop website. We are doing this incrementally. 
 
+You are now in the stage of making small content and visual corrections. Do not make major changes to the website.
+
 Add the link to the latex template https://ras.papercept.net/conferences/support/tex.php
 add the link to the microsoft word template https://ras.papercept.net/conferences/support/word.php
 Make the Aug 13 deadline and Sept 1 release text bolded

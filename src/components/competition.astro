@@ -1,5 +1,6 @@
 ---
 import competitionImage from "../../images/competition_image.png";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 const tracks = [
   {
@@ -105,7 +106,7 @@ const tracks = [
             </div>
 
             <a
-              href="/competition"
+              href={`${base}/competition`}
               class="flex items-center justify-center rounded-[1.25rem] border border-cyan-300/30 bg-cyan-400/15 px-4 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-400/25"
             >
               View Instructions

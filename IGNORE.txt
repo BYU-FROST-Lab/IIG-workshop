@@ -26,13 +26,54 @@ We are working on developing a stylish and modern conference workshop website. W
 
 Add the link to the latex template https://ras.papercept.net/conferences/support/tex.php
 add the link to the microsoft word template https://ras.papercept.net/conferences/support/word.php
-
+Make the Aug 13 deadline and Sept 1 release text bolded
+In the dark contribution box in the Competition component, add a distinct "View Instructions" button that links to the competition page
+In the dark contribution box in the Competition component, add a link to the  "Competition Registration" https://docs.google.com/forms/d/e/1FAIpQLScD6Hycd1pdfG-7pKvoI4aF5QKfz0Begf4qTrSa18z3usI2pQ/viewform?usp=header
+The competition theme only fills half of the provided space. It should be wider to fit its width underneath the image.
 
 Do not work on any other part of the website right now.
 
 Do not run the build command.
 
 Do not read the IGNORE.txt file as it includes instructions that are not relevant to you.
+
+
+
+
+Change the order of the Organizers to match the list below. 
+Remove all bubbles and text on the organizer tiles except for their names.
+Add Website and Email icons to each tile.
+
+Shenghai Yuan - https://snakehaihai.github.io - shyuan@ntu.edu.sg 
+Elijah Pettitt - https://frostlab.byu.edu - epettitt@byu.edu (Corresponding Organizer)
+Muqing Cao - https://caomuqing.github.io - muqingc@andrew.cmu.edu 
+Seungchan Kim - https://seungchan-kim.github.io - seungch2@andrew.cmu.edu
+Cao Yuhong - https://yuhongcao.online - caoyuhong@u.nus.edu 
+Guillaume Sartoretti - https://marmotlab.org - guillaume.sartoretti@nus.edu.sg 
+Brady Moon - https://bradymoon.com - brady.moon@byu.edu 
+
+
+
+
+Competitiors are invited to join and submit methods to explore autonomously in an open-source indoor simulation environment. The competition winner will present their method at the workshop.
+
+Submissions are due Aug 13, 2026 at midnight local time.
+
+Competition Rankings will be released Sept 1, 2026
+
+View Instructions
+
+Link to the competition registration https://docs.google.com/forms/d/e/1FAIpQLScD6Hycd1pdfG-7pKvoI4aF5QKfz0Begf4qTrSa18z3usI2pQ/viewform?usp=header
+
+Tracks
+Single-robot indoor exploration: A single robot must efficiently explore an unknown indoor map and maximize the amount of useful information collected within the allotted budget.
+Multi-robot coordinated indoor exploration: A team of robots must collaboratively explore the same unknown indoor map. The robots are expected to share information and coordinate their motion so as to reduce redundant coverage and improve exploration efficiency.
+
+
+
+Deadline for Paper Submissions, Deadline for Competition Submissions- Aug 13
+Notice of Competitors Progressing to Final Round - Aug 24
+Notice for Paper Acceptance, Notice for Competition Submissions - Sept 1
 
 
 

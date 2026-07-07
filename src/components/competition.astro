@@ -3,16 +3,12 @@ import competitionImage from "../../images/competition_image.png";
 
 const tracks = [
   {
-    title: "Competition track placeholder",
-    note: "Use this area for a concise description of the main challenge and the evaluation criteria.",
+    title: "Track 1: Single-robot indoor exploration",
+    note: "A single robot must efficiently explore an unknown indoor map and maximize the amount of useful information collected within the allotted budget.",
   },
   {
-    title: "Secondary track placeholder",
-    note: "Use this area for a second track, if needed, or for clarifying participation categories.",
-  },
-  {
-    title: "Submission note placeholder",
-    note: "Use this area for the official submission format, starter kit, or benchmark access details.",
+    title: "Track 2: Multi-robot coordinated indoor exploration",
+    note: "A team of robots must collaboratively explore the same unknown indoor map. The robots are expected to share information and coordinate their motion so as to reduce redundant coverage and improve exploration efficiency.",
   },
 ];
 ---
@@ -54,7 +50,7 @@ const tracks = [
           />
           <div class="absolute inset-x-0 bottom-0 p-5 sm:p-6">
             <div class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white backdrop-blur">
-              Wide banner placeholder
+              Example Indoor Environment
             </div>
           </div>
         </div>
@@ -66,15 +62,7 @@ const tracks = [
                 Competition theme
               </p>
               <p class="mt-3 text-base leading-7 text-slate-700">
-                Replace this with a short description of the environment, task, or benchmark focus.
-              </p>
-            </div>
-            <div class="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
-              <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
-                Participation mode
-              </p>
-              <p class="mt-3 text-base leading-7 text-slate-700">
-                Replace this with the required setup, eligibility notes, or team-size guidance.
+                The competition emphasizes generalization to unseen indoor environments, efficient information gathering, and, in the multi-robot setting, coordination among robots with minimal redundant exploration.
               </p>
             </div>
           </div>
@@ -82,9 +70,6 @@ const tracks = [
           <div class="mt-6 space-y-4">
             {tracks.map((track) => (
               <div class="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-[0_16px_40px_-30px_rgba(15,23,42,0.18)]">
-                <p class="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-700/80">
-                  Placeholder item
-                </p>
                 <h3 class="mt-2 text-xl font-semibold tracking-[-0.03em] text-slate-950">
                   {track.title}
                 </h3>
@@ -100,44 +85,26 @@ const tracks = [
       <aside class="space-y-6">
         <div class="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-[linear-gradient(180deg,_#0f172a_0%,_#111827_100%)] p-6 text-white shadow-[0_30px_90px_-45px_rgba(15,23,42,0.5)] sm:p-8">
           <p class="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/70">
-            What should go here
+            Contribution
           </p>
           <h3 class="mt-3 text-2xl font-semibold tracking-[-0.03em] text-white">
-            Use this panel for the competition details that matter most.
+            The competition winner will present their method at the workshop.
           </h3>
           <p class="mt-4 text-sm leading-6 text-slate-300">
-            Keep the real wording compact and easy to scan. This panel is a good place for deadlines, scoring notes, and any setup links that participants need first.
+            Competitiors are invited to join and submit methods to explore autonomously in an open-source indoor simulation environment.
           </p>
 
           <div class="mt-6 space-y-3">
             <div class="rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4">
-              <p class="text-sm font-semibold text-white">Deadline placeholder</p>
+              <p class="text-sm font-semibold text-white">Deadlines</p>
               <p class="mt-1 text-sm leading-6 text-slate-300">
-                Replace with the final competition deadline or registration milestone.
-              </p>
-            </div>
-            <div class="rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4">
-              <p class="text-sm font-semibold text-white">Scoring placeholder</p>
-              <p class="mt-1 text-sm leading-6 text-slate-300">
-                Replace with the evaluation metric summary and any tie-breaker notes.
-              </p>
-            </div>
-            <div class="rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4">
-              <p class="text-sm font-semibold text-white">Resource placeholder</p>
-              <p class="mt-1 text-sm leading-6 text-slate-300">
-                Replace with the benchmark, repository, or starter-pack link once it is final.
-              </p>
-            </div>
-          </div>
-        </div>
+                Submissions are due Aug 13, 2026 at midnight local time.
 
-        <div class="rounded-[2rem] border border-slate-200/80 bg-white p-6 shadow-[0_24px_70px_-40px_rgba(15,23,42,0.22)] sm:p-8">
-          <p class="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-violet-700/80">
-            Editorial reminder
-          </p>
-          <p class="mt-3 text-base leading-7 text-slate-600">
-            Keep all placeholder wording clearly marked until the final rules and logistics are confirmed.
-          </p>
+                Competition Rankings will be released Sept 1, 2026
+              </p>
+            </div>
+            
+          </div>
         </div>
       </aside>
     </div>

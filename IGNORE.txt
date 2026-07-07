@@ -21,6 +21,9 @@ Do not work on any other part of the website right now.
 Feel free to add appropriate placeholder content. But do NOT make believable fake content. ONLY include descriptive placeholders about what content should be added. 
 
 
+Kostas Alexis: From Autonomous Exploration to Embodied Q&A
+Zhou: Multi-level Semantic Understanding and Efficient Manipulation: Towards Advanced Flight Intelligence
+
 
 We are working on developing a stylish and modern conference workshop website. We are doing this incrementally. 
 

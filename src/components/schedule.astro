@@ -1,13 +1,21 @@
 ---
 const scheduleItems = [
   { time: "8:30 - 8:45", event: "Chair Opening Remarks" },
-  { time: "8:45 - 9:10", event: "Kostas Alexis" },
-  { time: "9:10 - 9:35", event: "Jen Jen Chung" },
-  { time: "9:35 - 10:00", event: "Sebastian Scherer" },
-  { time: "10:00 - 10:25", event: "Michael Kaess" },
+  {
+    time: "8:45 - 9:10",
+    event: "Kostas Alexis",
+    title: "From Autonomous Exploration to Embodied Q&A",
+  },
+  { time: "9:10 - 9:35", event: "Jen Jen Chung", title: "Title Pending" },
+  { time: "9:35 - 10:00", event: "Sebastian Scherer", title: "Title Pending" },
+  { time: "10:00 - 10:25", event: "Michael Kaess", title: "Title Pending" },
   { time: "10:25 - 10:50", event: "Coffee Break and Poster Session" },
-  { time: "10:50 - 11:15", event: "Boyu Zhou" },
-  { time: "11:15 - 11:40", event: "Marija Popović" },
+  {
+    time: "10:50 - 11:15",
+    event: "Boyu Zhou",
+    title: "Multi-level Semantic Understanding and Efficient Manipulation: Towards Advanced Flight Intelligence",
+  },
+  { time: "11:15 - 11:40", event: "Marija Popović", title: "Title Pending" },
   { time: "11:40 - 12:05", event: "Challenge Champion Presentations" },
   { time: "12:05 - 12:30", event: "Panel Discussion and Conclusion" },
 ];
@@ -59,9 +67,11 @@ const scheduleItems = [
                 <h3 class="text-lg font-semibold tracking-[-0.03em] text-white sm:text-xl">
                   {item.event}
                 </h3>
-                <p class="mt-2 max-w-2xl text-sm leading-6 text-slate-300">
-                  Title Pending
-                </p>
+                {item.title && (
+                  <p class="mt-2 max-w-2xl text-sm leading-6 text-slate-300">
+                    {item.title}
+                  </p>
+                )}
               </div>
 
               <div class="hidden shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-300 sm:inline-flex">

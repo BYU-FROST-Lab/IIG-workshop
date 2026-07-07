@@ -26,7 +26,21 @@ We are working on developing a stylish and modern conference workshop website. W
 
 You are now in the stage of making small content and visual corrections. Do not make major changes to the website.
 
-Move the template links to the Submission Format division. Change the formatting accordingly.
+Create side box that looks similar to the competition darker right side box.
+
+Fill in the information below with similar formatting 
+Contribution
+Important Information
+Accepted papers will present at a poster pession and be hosted on the workshop website (non-archival).
+
+Deadlines
+Submissions are due Aug 13, 2026 at midnight local time. 
+Paper Acceptance will be sent Sept 1, 2026
+
+Submission Link
+
+
+
 
 Do not work on any other part of the website right now.
 
@@ -34,20 +48,6 @@ Do not run the build command.
 
 Do not read the IGNORE.txt file as it includes instructions that are not relevant to you.
 
-
-
-
-Change the order of the Organizers to match the list below. 
-Remove all bubbles and text on the organizer tiles except for their names.
-Add Website and Email icons to each tile.
-
-Shenghai Yuan - https://snakehaihai.github.io - shyuan@ntu.edu.sg 
-Elijah Pettitt - https://frostlab.byu.edu - epettitt@byu.edu (Corresponding Organizer)
-Muqing Cao - https://caomuqing.github.io - muqingc@andrew.cmu.edu 
-Seungchan Kim - https://seungchan-kim.github.io - seungch2@andrew.cmu.edu
-Cao Yuhong - https://yuhongcao.online - caoyuhong@u.nus.edu 
-Guillaume Sartoretti - https://marmotlab.org - guillaume.sartoretti@nus.edu.sg 
-Brady Moon - https://bradymoon.com - brady.moon@byu.edu 
 
 
 

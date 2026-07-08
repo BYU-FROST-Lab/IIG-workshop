@@ -11,12 +11,14 @@ const organizers = [
   {
     image: organizerSix,
     name: "Shenghai Yuan",
+    affiliation: "Nanyang Technological University, Singapore",
     website: "https://snakehaihai.github.io",
     email: "shyuan@ntu.edu.sg",
   },
   {
     image: organizerTwo,
     name: "Elijah Pettitt",
+    affiliation: "Brigham Young University, USA",
     website: "https://frostlab.byu.edu/people/elijah-pettitt/",
     email: "epettitt@byu.edu",
     corresponding: true,
@@ -24,30 +26,35 @@ const organizers = [
   {
     image: organizerFour,
     name: "Muqing Cao",
+    affiliation: "Carnegie Mellon University, USA",
     website: "https://caomuqing.github.io",
     email: "muqingc@andrew.cmu.edu",
   },
   {
     image: organizerFive,
     name: "Seungchan Kim",
+    affiliation: "Carnegie Mellon University, USA",
     website: "https://seungchan-kim.github.io",
     email: "seungch2@andrew.cmu.edu",
   },
   {
     image: organizerSeven,
     name: "Cao Yuhong",
+    affiliation: "National University of Singapore, Singapore",
     website: "https://www.yuhongcao.online",
     email: "caoyuhong@u.nus.edu",
   },
   {
     image: organizerThree,
     name: "Guillaume Sartoretti",
+    affiliation: "National University of Singapore, Singapore",
     website: "https://marmotlab.org",
     email: "guillaume.sartoretti@nus.edu.sg",
   },
   {
     image: organizerOne,
     name: "Brady Moon",
+    affiliation: "Brigham Young University, USA",
     website: "https://bradymoon.com",
     email: "brady.moon@byu.edu",
   },
@@ -102,6 +109,10 @@ const organizers = [
               <h3 class="text-2xl font-semibold tracking-[-0.03em] text-white">
                 {organizer.name}
               </h3>
+
+              <div class="mt-2 text-sm font-medium text-slate-200/85">
+                {organizer.affiliation}
+              </div>
 
               <div class="mt-4 flex items-center gap-3">
                 <a

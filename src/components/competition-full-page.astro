@@ -1,0 +1,219 @@
+---
+import environmentImage from "../../images/environments.png";
+---
+
+<article class="min-h-screen bg-white text-slate-900">
+  <div class="mx-auto max-w-4xl px-6 py-12 sm:px-8 sm:py-16 lg:px-10">
+    <div class="space-y-8">
+      <header class="border-b border-slate-200 pb-4">
+        <h1 class="text-4xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl">
+          Indoor Exploration Competition
+        </h1>
+      </header>
+
+      <div class="space-y-6 text-[1.05rem] leading-8 text-slate-700">
+
+        <strong>Deadlines:</strong>
+        <p class="space-y-1">
+          <span class="block"><strong class="font-semibold text-slate-900">13 Aug:</strong> Optional Feedback Submission</span>
+          <span class="block"><strong class="font-semibold text-slate-900">27 Aug:</strong> Final Submission</span>
+          <span class="block"><strong class="font-semibold text-slate-900">3 Sept:</strong> Competition Rankings Released</span>
+          <span class="block">All deadlines are at 23:59 AoE (Anywhere on Earth)</span>
+        </p>
+        <a
+          href="https://github.com/BYU-FROST-Lab/indoor-exploration-competition"
+          class="inline-flex text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900"
+        >
+          Competition GitHub Repo
+        </a>
+
+        <h2 class="border-b border-slate-200 pb-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
+            Overview
+          </h2>
+        <p>
+          Multi-robot (and single-robot) indoor exploration and relaying under communication
+          constraints. Robots explore an unknown environment using only local sensing and
+          limited peer-to-peer communication, and must get what they've learned back to a fixed
+          base station. <strong class="font-semibold text-slate-900">What you write is the policy</strong> -
+          exploration strategy, and optionally relay strategy too. Everything else (sensing,
+          motion, communication, the environment) is provided and identical for every
+          submission.
+        </p>
+
+
+        <section class="space-y-4">
+          <h2 class="border-b border-slate-200 pb-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
+            Tracks
+          </h2>
+          <p>
+            Submissions are scored on two tracks, differing only in
+            <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+              num_robots
+            </code>:
+          </p>
+          <ul class="space-y-3 pl-6">
+            <li class="list-disc">
+              <strong class="font-semibold text-slate-900">Single-agent</strong> -
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                num_robots: 1
+              </code>
+            </li>
+            <li class="list-disc">
+              <strong class="font-semibold text-slate-900">Multi-agent</strong> -
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                num_robots: 2, 3, 4, and 5
+              </code>
+            </li>
+          </ul>
+          <p>
+            You write one <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">Policy</code>;
+            it's evaluated across both.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="border-b border-slate-200 pb-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
+            Scoring
+          </h2>
+          <p>
+            At the end of a run, <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">main.py</code>
+            prints the final <strong class="font-semibold text-slate-900">base-station coverage</strong>:
+            the fraction of the true map the base station has learned about by
+            <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">max_steps</code>.
+            This rewards actually getting information home, not just observing it - so both
+            exploration and relay strategy matter for score.
+          </p>
+
+          <img
+            src={environmentImage.src}
+            alt="Example Environments"
+            class="h-full aspect-auto object-center transition duration-700 hover:scale-[1.02]"
+            loading="lazy"
+          />
+
+          <div class="space-y-4">
+            <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-950">
+              Your goal doesn't have to be frontier-based
+            </h3>
+            <p>
+              Any exploration strategy is allowed (frontier-based, sampling-based, potential-field,
+              learned, etc.) as long as it only uses
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">obs</code>.
+              Returning <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">None</code>
+              from <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">decide()</code>
+              is a legitimate way to say "no opinion" - the framework falls back to the nearest
+              reachable frontier in that case. But if you return a specific goal, it has to actually
+              be reachable: an unreachable, occupied, out-of-bounds, or malformed goal raises
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">InvalidGoalError</code>
+              and halts the run immediately, rather than being silently patched up for you.
+            </p>
+            <p>
+              Map prediction is also not provided. You may implement any map prediction stradegy but
+              it is not required.
+            </p>
+          </div>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="border-b border-slate-200 pb-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
+            What you implement
+          </h2>
+          <p>
+            You write a <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">Policy</code>
+            class with up to three decisions, all made per-robot:
+          </p>
+          <ul class="space-y-3 pl-6">
+            <li class="list-disc">
+              <strong class="font-semibold text-slate-900">`decide()`</strong> (required) - where
+              to explore next.
+            </li>
+            <li class="list-disc">
+              <strong class="font-semibold text-slate-900">`should_relay()`</strong> (optional) -
+              when to switch from exploring to relaying info back to base.
+            </li>
+            <li class="list-disc">
+              <strong class="font-semibold text-slate-900">`decide_relay_handoff()`</strong>
+              (optional) - while relaying, whether to hand relay duty off to a nearer connected
+              robot, and to whom.
+            </li>
+          </ul>
+          <p>
+            If you don't override <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">should_relay()</code>/
+            <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">decide_relay_handoff()</code>,
+            you get the provided baseline behavior for free, matching the shipped config.
+          </p>
+          <p>
+            Override <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">should_relay()</code>
+            and/or <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">decide_relay_handoff()</code>
+            to compete on relay strategy as well as exploration.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="border-b border-slate-200 pb-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
+            What the <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">Observation</code> contains
+          </h2>
+          <p>
+            Only what your robot has legitimately sensed or received over communication - never
+            ground truth:
+          </p>
+          <ul class="space-y-4 pl-6">
+            <li class="list-disc leading-7">
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                obs.combined_obs_map
+              </code>
+              - your robot's map so far (unknown / free / occupied). Whenever two robots (or a
+              robot and the base station) are in comm range, their maps are automatically fused, so
+              this can include cells a peer observed, not just what your own sensor has seen. Fusion
+              is provided/automatic - identical for every submission - not something
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                decide()
+              </code>
+              controls.
+            </li>
+            <li class="list-disc leading-7">
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">obs.pose</code>
+              - your robot's current position
+            </li>
+            <li class="list-disc leading-7">
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                obs.unreported_mask
+              </code>
+              , <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                obs.delegated_mask
+              </code>
+              - bookkeeping on what's been observed but not yet reported to base
+            </li>
+            <li class="list-disc leading-7">
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                obs.pose_lists_of_others
+              </code>
+              , <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                obs.intents_of_others
+              </code>
+              - other robots' trajectories/intents, as last shared over comm (may be stale if out of
+              range)
+            </li>
+            <li class="list-disc leading-7">
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">obs.base_pose</code>
+              - the base station's position (always known)
+            </li>
+            <li class="list-disc leading-7">
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                obs.connected_robot_ids
+              </code>
+              - robot ids currently (this timestep) in comm range, so entries for them in
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                pose_lists_of_others
+              </code>
+              are guaranteed fresh, not stale - useful for
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+                decide_relay_handoff()
+              </code>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</article>

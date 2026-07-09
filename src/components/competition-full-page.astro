@@ -1,4 +1,5 @@
 ---
+import environmentImage from "../../images/environments.png";
 ---
 
 <article class="min-h-screen bg-white text-slate-900">
@@ -11,6 +12,24 @@
       </header>
 
       <div class="space-y-6 text-[1.05rem] leading-8 text-slate-700">
+
+        <strong>Deadlines:</strong>
+        <p class="space-y-1">
+          <span class="block"><strong class="font-semibold text-slate-900">13 Aug:</strong> Optional Feedback Submission</span>
+          <span class="block"><strong class="font-semibold text-slate-900">27 Aug:</strong> Final Submission</span>
+          <span class="block"><strong class="font-semibold text-slate-900">3 Sept:</strong> Competition Rankings Released</span>
+          <span class="block">All deadlines are at 11:59 EDT.</span>
+        </p>
+        <a
+          href="https://github.com/BYU-FROST-Lab/indoor-exploration-competition"
+          class="inline-flex text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900"
+        >
+          Competition GitHub Repo
+        </a>
+
+        <h2 class="border-b border-slate-200 pb-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
+            Overview
+          </h2>
         <p>
           Multi-robot (and single-robot) indoor exploration and relaying under communication
           constraints. Robots explore an unknown environment using only local sensing and
@@ -20,6 +39,7 @@
           motion, communication, the environment) is provided and identical for every
           submission.
         </p>
+
 
         <section class="space-y-4">
           <h2 class="border-b border-slate-200 pb-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
@@ -41,7 +61,7 @@
             <li class="list-disc">
               <strong class="font-semibold text-slate-900">Multi-agent</strong> -
               <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
-                num_robots: 2, 3, 4, 5
+                num_robots: 2, 3, 4, and 5
               </code>
             </li>
           </ul>
@@ -63,6 +83,13 @@
             This rewards actually getting information home, not just observing it - so both
             exploration and relay strategy matter for score.
           </p>
+
+          <img
+            src={environmentImage.src}
+            alt="Example Environments"
+            class="h-full aspect-auto object-center transition duration-700 hover:scale-[1.02]"
+            loading="lazy"
+          />
 
           <div class="space-y-4">
             <h3 class="text-2xl font-semibold tracking-[-0.02em] text-slate-950">

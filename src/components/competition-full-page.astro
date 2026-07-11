@@ -15,9 +15,9 @@ import environmentImage from "../../images/environments.png";
 
         <strong>Deadlines:</strong>
         <p class="space-y-1">
-          <span class="block"><strong class="font-semibold text-slate-900">13 Aug:</strong> Optional Feedback Submission</span>
+          <span class="block"><strong class="font-semibold text-slate-900">13 Aug:</strong> Optional Feedback Submission and Preliminary Rankings</span>
           <span class="block"><strong class="font-semibold text-slate-900">27 Aug:</strong> Final Submission</span>
-          <span class="block"><strong class="font-semibold text-slate-900">3 Sept:</strong> Competition Rankings Released</span>
+          <span class="block"><strong class="font-semibold text-slate-900">3 Sept:</strong> Competition Results Released</span>
           <span class="block">All deadlines are at 23:59 AoE (Anywhere on Earth)</span>
         </p>
         <a
@@ -46,29 +46,93 @@ import environmentImage from "../../images/environments.png";
             Tracks
           </h2>
           <p>
-            Submissions are scored on two tracks, differing only in
-            <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
-              num_robots
-            </code>:
+            Submissions are scored on two tracks:
           </p>
           <ul class="space-y-3 pl-6">
             <li class="list-disc">
-              <strong class="font-semibold text-slate-900">Single-agent</strong> -
+              <strong class="font-semibold text-slate-900">Single-agent</strong> —
               <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
                 num_robots: 1
               </code>
             </li>
             <li class="list-disc">
-              <strong class="font-semibold text-slate-900">Multi-agent</strong> -
+              <strong class="font-semibold text-slate-900">Multi-agent</strong> —
               <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
-                num_robots: 2, 3, 4, and 5
+                num_robots: 2, 3, 4, 5
               </code>
             </li>
           </ul>
           <p>
             You write one <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">Policy</code>;
-            it's evaluated across both.
+            it's evaluated across both. Official scoring also runs across environments grouped by
+            size, each with its own timestep budget
+            <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">
+              max_steps
+            </code>
+            — single-agent gets a larger budget than multi-agent on the same environment:
           </p>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-left text-sm">
+              <thead>
+                <tr class="border-b border-slate-200">
+                  <th class="px-3 py-2 font-semibold text-slate-900">Size</th>
+                  <th class="px-3 py-2 font-semibold text-slate-900">Released examples</th>
+                  <th class="px-3 py-2 font-semibold text-slate-900">
+                    Single-agent <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">max_steps</code>
+                  </th>
+                  <th class="px-3 py-2 font-semibold text-slate-900">
+                    Multi-agent <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">max_steps</code>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-slate-200">
+                  <td class="px-3 py-2 font-medium text-slate-900">Small</td>
+                  <td class="px-3 py-2 font-mono text-slate-700">env1, env2</td>
+                  <td class="px-3 py-2 text-slate-700">1000</td>
+                  <td class="px-3 py-2 text-slate-700">500</td>
+                </tr>
+                <tr class="border-b border-slate-200">
+                  <td class="px-3 py-2 font-medium text-slate-900">Medium</td>
+                  <td class="px-3 py-2 font-mono text-slate-700">env3, env4, env5</td>
+                  <td class="px-3 py-2 text-slate-700">1500</td>
+                  <td class="px-3 py-2 text-slate-700">1000</td>
+                </tr>
+                <tr>
+                  <td class="px-3 py-2 font-medium text-slate-900">Large</td>
+                  <td class="px-3 py-2 font-mono text-slate-700">env6, env7</td>
+                  <td class="px-3 py-2 text-slate-700">2000</td>
+                  <td class="px-3 py-2 text-slate-700">1500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-slate-600">
+            (See Stages below — Stage 2's held-out maps aren't
+            <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">env1</code>–<code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">env7</code>
+            themselves, but follow this same size-based
+            <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">max_steps</code>
+            scheme.)
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="border-b border-slate-200 pb-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
+            Stages
+          </h2>
+          <ul class="space-y-3 pl-6">
+            <li class="list-disc leading-7">
+              <strong class="font-semibold text-slate-900">Stage 1 (preliminary, optional)</strong>
+              — submit your policy to us and we'll run it on the released test environments
+              <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">env1</code>–<code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">env7</code>, score it, and post results to a leaderboard along with feedback.
+            </li>
+            <li class="list-disc leading-7">
+              <strong class="font-semibold text-slate-900">Stage 2 (final)</strong> — the actual
+              scored round. You don't need to have submitted to Stage 1 to enter Stage 2, but
+              Stage 2 submissions get no feedback. Scoring runs on a different, held-out set of
+              environments (not <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">env1</code>–<code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">env7</code>), sized and budgeted per the table above.
+            </li>
+          </ul>
         </section>
 
         <section class="space-y-4">
@@ -107,10 +171,6 @@ import environmentImage from "../../images/environments.png";
               <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">InvalidGoalError</code>
               and halts the run immediately, rather than being silently patched up for you.
             </p>
-            <p>
-              Map prediction is also not provided. You may implement any map prediction stradegy but
-              it is not required.
-            </p>
           </div>
         </section>
 
@@ -146,6 +206,25 @@ import environmentImage from "../../images/environments.png";
             Override <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">should_relay()</code>
             and/or <code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">decide_relay_handoff()</code>
             to compete on relay strategy as well as exploration.
+          </p>
+        </section>
+
+        <section class="space-y-4">
+          <h2 class="border-b border-slate-200 pb-2 text-3xl font-semibold tracking-[-0.03em] text-slate-950">
+            Map prediction (coming soon)
+          </h2>
+          <p>
+            We'll be releasing training data of floorplans that can be used for map prediction —
+            e.g. inferring the likely layout of still-unknown areas from what's been observed so
+            far, to inform exploration. Not available yet; we'll announce here once it's released.
+            In the meantime, for a sample prediction approach, see
+            <a
+              href="https://github.com/castacks/MapEx"
+              class="text-slate-900 underline decoration-slate-300 underline-offset-4 transition hover:decoration-slate-900"
+            >
+              MapEx
+            </a>
+            (<code class="rounded-md bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-900">github.com/castacks/MapEx</code>).
           </p>
         </section>
 

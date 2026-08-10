@@ -12,6 +12,17 @@ const tracks = [
     note: "Competitors who choose to enter track 2 must have a team of robots collaboratively explore the same unknown indoor map. The robots are expected to share information and coordinate their motion so as to reduce redundant coverage and improve exploration efficiency.",
   },
 ];
+
+const prizes = [
+  {
+    track: "Single-agent",
+    awards: ["1st Place: Certificate + $500 USD", "2nd Place: Certificate + $150 USD", "3rd Place: Certificate"],
+  },
+  {
+    track: "Multi-agent",
+    awards: ["1st Place: Certificate + $1,000 USD", "2nd Place: Certificate + $350 USD", "3rd Place: Certificate"],
+  },
+];
 ---
 
 <section
@@ -112,6 +123,25 @@ const tracks = [
               <p class="mt-1 text-sm leading-6 text-slate-300">
                 All deadlines are at 23:59 AoE (Anywhere on Earth)
               </p>
+            </div>
+
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/5 px-4 py-4">
+              <p class="text-sm font-semibold text-white">Prizes</p>
+              <p class="mt-1 text-sm leading-6 text-slate-300">
+                Prizes are awarded separately per track. You may enter either track or both.
+              </p>
+              <div class="mt-3 space-y-3">
+                {prizes.map((prize) => (
+                  <div class="rounded-[1rem] border border-white/10 bg-black/10 px-3 py-3">
+                    <p class="text-sm font-semibold text-white">{prize.track}</p>
+                    <ul class="mt-2 space-y-1 text-sm leading-6 text-slate-300">
+                      {prize.awards.map((award) => (
+                        <li>{award}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
 
 

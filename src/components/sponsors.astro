@@ -5,11 +5,13 @@ import comarvelLogo from "../../images/sponsors/comarvel.png";
 const sponsors = [
   {
     image: comarvelLogo,
-    label: "Sponsor logo",
+    alt: "CMII",
+    imageClass: "max-h-28 w-full object-contain sm:max-h-32",
   },
   {
     image: aeriseLogo,
-    label: "Sponsor logo",
+    alt: "Aerise",
+    imageClass: "max-h-28 w-full object-contain sm:max-h-20",
   },
 ];
 ---
@@ -34,26 +36,16 @@ const sponsors = [
     </div>
 
     <div class="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-4 md:grid-cols-2">
-        
+      {sponsors.map((sponsor) => (
         <div class="flex items-center justify-center rounded-[2rem] border border-slate-200/80 bg-white px-6 py-6 shadow-[0_24px_70px_-40px_rgba(15,23,42,0.18)] sm:px-8 sm:py-7">
           <img
-            src="../../images/sponsors/comarvel.png"
-            alt="CMII"
-            class="max-h-28 w-full object-contain sm:max-h-32"
+            src={sponsor.image.src}
+            alt={sponsor.alt}
+            class={sponsor.imageClass}
             loading="lazy"
           />
         </div>
-        
-        <div class="flex items-center justify-center rounded-[2rem] border border-slate-200/80 bg-white px-6 py-6 shadow-[0_24px_70px_-40px_rgba(15,23,42,0.18)] sm:px-8 sm:py-7">
-          <img
-            src="../../images/sponsors/aerise.png"
-            alt="Aerise"
-            class="max-h-28 w-full object-contain sm:max-h-20"
-            loading="lazy"
-          />
-        </div>
-
-      
+      ))}
     </div>
   </div>
 </section>

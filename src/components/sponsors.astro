@@ -1,14 +1,14 @@
 ---
-import aeriseLogo from "../../images/sponsors/aerise.jpg";
+import aeriseLogo from "../../images/sponsors/aerise.png";
 import comarvelLogo from "../../images/sponsors/comarvel.png";
 
 const sponsors = [
   {
-    image: aeriseLogo,
+    image: comarvelLogo,
     label: "Sponsor logo",
   },
   {
-    image: comarvelLogo,
+    image: aeriseLogo,
     label: "Sponsor logo",
   },
 ];
@@ -34,16 +34,26 @@ const sponsors = [
     </div>
 
     <div class="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
-      {sponsors.map((sponsor) => (
+        
         <div class="flex items-center justify-center rounded-[2rem] border border-slate-200/80 bg-white px-8 py-10 shadow-[0_24px_70px_-40px_rgba(15,23,42,0.18)]">
           <img
-            src={sponsor.image.src}
-            alt={sponsor.label}
+            src="../../images/sponsors/comarvel.png"
+            alt="CMII"
             class="max-h-28 w-full object-contain sm:max-h-32"
             loading="lazy"
           />
         </div>
-      ))}
+        
+        <div class="flex items-center justify-center rounded-[2rem] border border-slate-200/80 bg-white px-8 py-10 shadow-[0_24px_70px_-40px_rgba(15,23,42,0.18)]">
+          <img
+            src="../../images/sponsors/aerise.png"
+            alt="Aerise"
+            class="max-h-28 w-full object-contain sm:max-h-20"
+            loading="lazy"
+          />
+        </div>
+
+      
     </div>
   </div>
 </section>
